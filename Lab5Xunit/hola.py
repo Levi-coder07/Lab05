@@ -16,7 +16,12 @@ class ChromeSearch(unittest.TestCase):
         title = driver.title
         assert title == "Web form"
 
-    def second_test(self):
+    def test_second(self):
+        driver = self.driver
+        driver.get("https://www.selenium.dev/selenium/web/web-form.html")
+
+        title = driver.title
+        assert title == "Web form"
         driver = self.driver
         driver.implicitly_wait(5)
 
